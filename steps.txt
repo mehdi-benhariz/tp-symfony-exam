@@ -1,0 +1,28 @@
+composer require symfony/orm-pack
+composer req orm-fixtures
+
+php bin/console doctrine:database:create
+
+php bin/console make:entity  
+
+composer require symfony/maker-bundle --dev
+php bin/console make:migration
+php bin/console doctrine:migrations:migrates
+
+composer require security
+php bin/console make:user
+symfony console doctrine:migrations:migrate
+
+ composer require form validator
+composer require validator
+php bin/console make:security:form-login
+php bin/console make:registration-form
+
+php bin/console make:controller PatientController
+php bin/console make:controller RDVController
+php bin/console make:controller ConsultationController
+
+
+
+
+
