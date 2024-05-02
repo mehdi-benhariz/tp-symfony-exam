@@ -11,25 +11,25 @@ class Patient
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    public ?int $id = null;
 
     #[ORM\Column]
-    private ?int $num_carte = null;
+    public ?int $num_carte = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $nom = null;
+    public ?string $nom = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $prenom = null;
+    public ?string $prenom = null;
 
     #[ORM\Column]
-    private ?int $date_de_naissance = null;
+    public ?int $date_de_naissance = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $num_telephone = null;
+    public ?int $num_telephone = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $E_mail = null;
+    public ?string $E_mail = null;
 
     public function getId(): ?int
     {

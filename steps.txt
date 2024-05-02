@@ -23,6 +23,5 @@ php bin/console make:controller RDVController
 php bin/console make:controller ConsultationController
 
 
-
-
-
+composer require symfony/form
+php bin/console make:form PatientType

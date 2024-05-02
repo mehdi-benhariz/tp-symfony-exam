@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add New Patient{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4">Add New Patient</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                {{ form_start(form) }}
+                    <div class="mb-3">
+                        {{ form_label(form.num_carte, 'Card Number', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.num_carte, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_label(form.nom, 'Last Name', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_label(form.prenom, 'First Name', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_label(form.date_de_naissance, 'Date of Birth', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.date_de_naissance, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_label(form.num_telephone, 'Phone Number', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.num_telephone, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_label(form.E_mail, 'Email', {'label_attr': {'class': 'form-label'}}) }}
+                        {{ form_widget(form.E_mail, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
